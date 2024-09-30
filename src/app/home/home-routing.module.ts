@@ -1,16 +1,23 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { HomePage } from './home.page';
+import { QRPage } from '../qr/qr.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: '', 
+    redirectTo: 'home', 
+    pathMatch:'full'},
+  {
+    path: 'home',
     component: HomePage,
-  }
+  },
+  {path: 'qr',component: QRPage}
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forRoot(routes,
+    {preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 export class HomePageRoutingModule {}
