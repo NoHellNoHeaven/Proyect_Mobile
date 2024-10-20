@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: () => import('./qr/qr.module').then( m => m.QRPageModule)
   },
   {
+    path : 'login',
+    loadChildren: () => import('src/app/login/login-routing.module').then( m => m.LoginPageRoutingModule) 
+  },
+  {
     path: 'alumno',
     loadChildren: () => import('./alumno/alumno.module').then( m => m.AlumnoPageModule)
   },
@@ -27,6 +31,11 @@ const routes: Routes = [
     path: 'registrarse',
     loadChildren: () => import('./registrarse/registrarse.module').then( m => m.RegistrarsePageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+
 ];
 
 @NgModule({
