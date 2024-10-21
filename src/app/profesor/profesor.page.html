@@ -1,13 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>profesor</ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">profesor</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="separador">
+    <a [routerLink]="['/inicio']"><ion-icon src="/assets/volver.svg" > </ion-icon> </a>
+    <ion-icon src="/assets/{{icono}}.svg" id="tema"(click)="cambiarTema()"></ion-icon>
+  </div>
+  <div class="contenedor">
+    <ion-icon src="/assets/user.svg"></ion-icon>
+
+    <div class="infoProfe">
+      <H6>Fernando Sepulveda</H6>
+      <p>Profesor Programacion Web <br> Prefesor Programacion Aplicaciones moviles </p>
+    </div>
+    <button [routerLink]="['/escanear-qr']" >Iniciar clase.</button>
+
+  </div>
 </ion-content>

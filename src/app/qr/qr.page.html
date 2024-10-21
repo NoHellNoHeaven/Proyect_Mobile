@@ -1,13 +1,15 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>QR</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">QR</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="separador">
+    <a [routerLink]="['/inicio']"><ion-icon src="/assets/volver.svg" > </ion-icon> </a>
+    <ion-icon src="/assets/{{icono}}.svg" id="tema"(click)="cambiarTema()"></ion-icon>
+  </div>
+
+ <div class="contenedor">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Commons_QR_code.png" alt="" id="qr">
+  <div class="claseInfo">
+    <h6>Programacion Aplicaciones moviles</h6>
+    <p> Seccion 001D 01:10 - 02:50</p>
+  </div>  
+</div>
 </ion-content>
+

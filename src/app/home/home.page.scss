@@ -1,0 +1,50 @@
+//estilo background
+.contenedor{
+    background-color: var(--fondo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+    min-height: 100vh;
+    //estilo icono
+    ion-icon{
+      font-size: 8rem;
+      color: var(--icono);
+    }
+    //estilo boton
+    input,button{
+      width: 90%;
+      height: 2.5rem;
+      outline: none;
+      border: none;
+      border-radius:1.25rem;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    //color input
+    input{
+      background-color: var(--fondo-input);
+      color: black;
+    }
+    // color boton
+    button{
+      background-color: var(--icono);
+    }
+    // color texto
+    h1,p{
+      color: var(--textos);
+    }
+  }
+  //chupalo pablo xdd
+  #tema{
+    color: var(--icono-tema);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 1.8rem;
+  }
+  // enesima vez contenedor
+  .contenedor{
+    transition: background-color .5s ease;
+  }

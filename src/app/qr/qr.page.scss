@@ -1,0 +1,25 @@
+.contenedor{
+    background-color: var(--fondo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+    min-height: 92vh;
+  }
+  .separador {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--fondo);
+  
+    ion-icon {
+      padding: 20px 20px 0 20px;
+    }
+  }
+  .claseInfo{text-align: center;}
+  
+  #tema, ion-icon{
+      color: var(--icono-tema);
+      font-size: 2rem;
+    }
+    
