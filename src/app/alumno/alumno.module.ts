@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     ReactiveFormsModule, // Asegúrate de incluir esto
     IonicModule,
-    RouterModule.forChild([])
+    RouterModule.forChild([{ path: '', component: AlumnoPage }])
   ],
   declarations: [AlumnoPage]
 })
