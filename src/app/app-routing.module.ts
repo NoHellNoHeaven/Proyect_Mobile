@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
@@ -15,9 +15,10 @@ const routes: Routes = [
     path: 'qr',
     loadChildren: () => import('./qr/qr.module').then( m => m.QRPageModule)
   },
+  
   {
     path : 'login',
-    loadChildren: () => import('src/app/login/login-routing.module').then( m => m.LoginPageRoutingModule) 
+    loadChildren: () => import('./login/login.module').then( m => m.LoginFormPageModule) 
   },
   {
     path: 'alumno',
@@ -31,16 +32,14 @@ const routes: Routes = [
     path: 'registrarse',
     loadChildren: () => import('./registrarse/registrarse.module').then( m => m.RegistrarsePageModule)
   },
-  {
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  },
+  {path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginFormPageModule) 
+     },
 
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes)
   ],
   exports: [RouterModule]
 })

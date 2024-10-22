@@ -1,16 +1,43 @@
-<ion-content [fullscreen]="true">
-  <div class="separador">
-    <a [routerLink]="['/home']"><ion-icon src="/assets/volver.svg" > </ion-icon> </a>
-    <ion-icon src="/assets/{{icono}}.svg" id="tema"(click)="cambiarTema()"></ion-icon>
+<ion-content class="ion-padding">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="title">Crear una cuenta</h2>
+      <p class="subtitle">Ingresa tus datos para registrarte</p>
+    </div>
+    <form (submit)="handleSubmit($event)">
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input name="nombre" type="text" required (ionInput)="handleChange($event)"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Apellido</ion-label>
+        <ion-input name="apellido" type="text" required (ionInput)="handleChange($event)"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Correo electrónico</ion-label>
+        <ion-input name="email" type="email" required (ionInput)="handleChange($event)"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input name="password" type="password" required (ionInput)="handleChange($event)"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Confirmar contraseña</ion-label>
+        <ion-input name="confirmPassword" type="password" required (ionInput)="handleChange($event)"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Tipo de usuario</ion-label>
+        <ion-select name="tipoUsuario" placeholder="Selecciona tu rol" (ionChange)="handleSelectChange($event)">
+          <ion-select-option value="estudiante">Estudiante</ion-select-option>
+          <ion-select-option value="profesor">Profesor</ion-select-option>
+          <ion-select-option value="administrativo">Administrativo</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">ID Estudiantil / Empleado</ion-label>
+        <ion-input name="idEstudiantil" type="text" required (ionInput)="handleChange($event)"></ion-input>
+      </ion-item>
+      <ion-button expand="block" type="submit" class="submit-button">Registrarse</ion-button>
+    </form>
   </div>
-  <div class="contenedor">
-  <h2>Registrarse</h2>
-  <input type="text" placeholder="Nombre">
-  <input type="text" placeholder="Apellido">
-  <input type="text" placeholder="Correo">
-  <input type="text" placeholder="Nombre de Usuario">
-  <input type="password" placeholder="Contraseña">
-  <input type="password" placeholder="Repetir Contraseña">
-  <button (click)="navegar()">Registrar</button>
-</div>
 </ion-content>

@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { RegistrarsePageRoutingModule } from './registrarse-routing.module';
 
 import { RegistrarsePage } from './registrarse.page';
+import { Router, RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RegistrarsePageRoutingModule
+    RegistrarsePageRoutingModule,
+    RouterModule.forChild([])
   ],
   declarations: [RegistrarsePage]
 })

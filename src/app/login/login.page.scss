@@ -1,15 +1,25 @@
-ion-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  
-  form {
-    width: 100%;
-    max-width: 400px;
-    ion-item {
-      margin-bottom: 16px;
-    }
-  }
-  
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 16px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: black;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 16px;
+}
+
+.submit-button {
+  margin-top: 16px;
+}
