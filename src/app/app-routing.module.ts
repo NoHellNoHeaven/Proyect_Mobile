@@ -33,7 +33,15 @@ const routes: Routes = [
     loadChildren: () => import('./registrarse/registrarse.module').then( m => m.RegistrarsePageModule)
   },
   {path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginFormPageModule) 
-     },
+     },  {
+    path: 'scanner',
+    loadChildren: () => import('./scanner/scanner.module').then( m => m.ScannerPageModule)
+  },
+  {
+    path: 'asistencia',
+    loadChildren: () => import('./asistencia/asistencia.module').then( m => m.AsistenciaPageModule)
+  },
+
 
 ];
 
